@@ -1,0 +1,16 @@
+.input {
+    width: 420px;
+    height: 51px;
+
+    background: #F9FAFF;
+    border: 1px solid #DEE6FF;
+    border-radius: 5px;
+
+    padding: 8px 16px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}

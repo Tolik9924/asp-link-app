@@ -1,0 +1,14 @@
+.container {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.short {
+    color: #5380EA
+}

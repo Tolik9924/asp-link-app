@@ -1,0 +1,43 @@
+.button {}
+
+.header {
+    padding: 0.3em 2em;
+
+    width: 103px;
+    height: 51px;
+
+    background: #F0B80D;
+    border: 1px solid #FFD24B;
+    box-shadow: 0px 10px 34px #EAC555;
+    border-radius: 40px;
+    cursor: pointer;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+
+    text-align: center;
+
+    color: #101010;
+}
+
+.short {
+    width: 200px;
+    height: 51px;
+    background: #5380EA;
+    border: 1px solid #5380EA;
+    box-shadow: 0px 10px 34px rgba(83, 128, 234, 0.5);
+    border-radius: 40px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+
+    cursor: pointer;
+}
