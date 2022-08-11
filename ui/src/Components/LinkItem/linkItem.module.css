@@ -1,0 +1,20 @@
+.container {
+    width: 420px;
+    height: 95px;
+    background: #F6FBF8;
+    box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+
+    display: flex;
+    justify-content: center;
+
+    color: #656565;
+
+    margin-top: 3%;
+}
