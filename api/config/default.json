@@ -1,0 +1,4 @@
+{
+    "serverPort": 5000,
+    "dbUrl": "mongodb+srv://tolik:gtv19990924@link-app.xkwfgnv.mongodb.net/link-app?retryWrites=true&w=majority"
+}
