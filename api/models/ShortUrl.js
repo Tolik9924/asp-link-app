@@ -1,15 +1,18 @@
 const {Schema, model} = require('mongoose');
-const shortId = require('shortid');
 
 const ShortUrl = new Schema({
+    urlCode: {
+        type: String
+    },
     longUrl: {
-        type: String,
-        required: true
+        type: String
     },
     shortUrl: {
+        type: String
+    },
+    date: {
         type: String,
-        required: true,
-        default: shortId.generate
+        default: Date.now
     }
 });
 

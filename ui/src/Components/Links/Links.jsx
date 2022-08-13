@@ -18,7 +18,8 @@ const Links = ({
                       <LinkItem key={item.id}
                                 linkName={item.linkName}
                                 linkId={item.id}
-                                copyText={copyText} />
+                                copyText={copyText}
+                                urlCode={item.urlCode} />
                     );
                 })
             }

@@ -5,16 +5,14 @@ import classNames from 'classnames';
 import style from './input.module.css';
 
 const Input = ({
-    Icon,
     name = '',
     type = 'text',
     disabled = false,
     value,
-    span,
     handleChange,
     size = 'medium',
     placeholder = '',
-    theme = 'primary'
+    theme = 'primary',
 }) => {
 
     const classProps = classNames(style.input, style[`${size}Input`], style[`${theme}Input`]);

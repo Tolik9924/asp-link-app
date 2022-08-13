@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addNewLink, increaseNewId } from '../../store/linkReducer';
+import { increaseNewId } from '../../store/linkReducer';
 import Button from '../Button/Button';
 import Header from '../Header/Header';
 import Input from '../Input/Input';
@@ -21,14 +21,18 @@ const ShortLink = () => {
 
     console.log(link);
 
-    const copyText = (link) => {
-        navigator.clipboard.writeText(link)
+    const copyText = async (link) => {
+        await navigator.clipboard.writeText(link)
     }
 
-    const newLinkAdd = () => {
+    const newLinkAdd = (e) => {
+
+        e.preventDefault();
+
         const newLink = {
             id: link.newId,
-            linkName: nameLink
+            linkName: nameLink,
+            urlCode: ''
         }
 
         dispatch(addLink(newLink));
@@ -45,17 +49,20 @@ const ShortLink = () => {
         <div>
             <Header />
             <NamePage />
-            <div className={style.input}>
-                <Input placeholder='http://type-your-link.here ...' 
-                       value={nameLink} 
-                       handleChange={handleChange} />
-            </div>
-            <div className={style.button}>
-                <Button onClick={newLinkAdd} 
+            <form onSubmit={newLinkAdd}>
+                <div className={style.input}>
+                    <Input placeholder='http://type-your-link.here ...'
+                        value={nameLink}
+                        handleChange={handleChange}
+                        type='url' />
+                </div>
+                <div className={style.button}>
+                    <Button type='submit'
                         theme='short'>
-                            Short me
-                </Button>
-            </div>
+                        Short me
+                    </Button>
+                </div>
+            </form>
             <Links links={link.links} copyText={copyText} />
         </div>
     );

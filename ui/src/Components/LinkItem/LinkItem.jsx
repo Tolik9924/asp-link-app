@@ -4,13 +4,14 @@ import style from './linkItem.module.css';
 
 const LinkItem = ({
     linkName,
-    copyText
+    copyText,
+    urlCode
 }) => {
 
     return (
         <div onClick={() => copyText(linkName)} 
              className={style.container}>
-            <p>{linkName}</p>
+            <p>asd.link/{urlCode}</p>
         </div>
     );
 }

@@ -1,14 +1,20 @@
 import axios from "axios"
-import { API_BASE_URL } from "../config/config"
+import { ASD_API_BASE_URL } from "../config/config"
 import { addNewLink } from "../store/linkReducer"
 
 export const addLink = (link) => {
-    return async (dispatch) => {
-        axios.post(`${API_BASE_URL}${link.linkName}`)
+    return (dispatch) => {
+        console.log('post');
+        axios.post(`${ASD_API_BASE_URL}`, {longUrl: link.linkName})
         .then(res => {
-            link.linkName = res.data.result.short_link;
+            console.log(res);
+            link.linkName = res.data.shortUrl;
+            link.urlCode = res.data.urlCode;
             dispatch(addNewLink(link))
-            console.log('link', res.data.result.short_link);
+            console.log('link', res.data.shortUrl);
         })
+        .catch(e => {
+            console.log(e.message);
+        });
     }
 }
