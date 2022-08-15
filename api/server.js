@@ -7,6 +7,7 @@ const PORT = config.get('serverPort');
 
 const linkRouter = require('./routes/link.routes');
 const redirectRouter = require('./routes/redirect.routes');
+const getLongLink = require('./routes/getLongLink.routes');
 
 const corsMiddleware = require('./middleware/cors.middleware');
 
@@ -14,6 +15,7 @@ app.use(corsMiddleware);
 app.use(express.json())
 app.use('/api/link', linkRouter);
 app.use('/api/getlink', redirectRouter);
+app.use('/api/getlonglink', getLongLink);
 
 const start = async () => {
     try {

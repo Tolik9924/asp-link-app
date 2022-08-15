@@ -6,7 +6,7 @@ export const defaultState = {
 const ADD_LINK = 'ADD_LINK';
 const INCREASE_NEW_ID = 'INCREASE_NEW_ID';
 
-export const linkReducer = (state = defaultState, action) => {
+export const longLinkReducer = (state = defaultState, action) => {
     switch(action.type) {
         case ADD_LINK:
             return {
@@ -21,5 +21,5 @@ export const linkReducer = (state = defaultState, action) => {
     }
 }
 
-export const addNewLink = (newLink) => ({type: ADD_LINK, newLink});
+export const addValidLink = (newLink) => ({type: ADD_LINK, newLink});
 export const increaseNewId = () => ({type: INCREASE_NEW_ID});

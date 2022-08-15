@@ -1,28 +1,5 @@
 .button {}
 
-.header {
-    padding: 0.3em 2em;
-
-    width: 103px;
-    height: 51px;
-
-    background: #F0B80D;
-    border: 1px solid #FFD24B;
-    box-shadow: 0px 10px 34px #EAC555;
-    border-radius: 40px;
-    cursor: pointer;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-
-    text-align: center;
-
-    color: #101010;
-}
-
 .short {
     width: 200px;
     height: 51px;
@@ -40,4 +17,21 @@
     color: #FFFFFF;
 
     cursor: pointer;
+}
+
+.link {
+    width: 420px;
+    height: 95px;
+    background: #F6FBF8;
+    box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    border: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #656565;
 }

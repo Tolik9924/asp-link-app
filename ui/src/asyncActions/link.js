@@ -1,6 +1,7 @@
 import axios from "axios"
-import { ASD_API_BASE_URL } from "../config/config"
+import { ASD_API_BASE_URL, ASD_API_GET_URL } from "../config/config"
 import { addNewLink } from "../store/linkReducer"
+import { addValidLink } from "../store/longLinkReducer"
 
 export const addLink = (link) => {
     return (dispatch) => {
@@ -18,3 +19,14 @@ export const addLink = (link) => {
         });
     }
 }
+
+export const addLongLink = (code) => {
+    return (dispatch) => {
+        axios.get(`${ASD_API_GET_URL}${code.code}`)
+        .then(res => {
+            console.log(res.data);
+            code.url = res.data;
+            dispatch(addValidLink(code));
+        });
+    }
+} 

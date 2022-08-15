@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../Button/Button';
 
 import style from './linkItem.module.css';
 
@@ -9,9 +10,10 @@ const LinkItem = ({
 }) => {
 
     return (
-        <div onClick={() => copyText(linkName)} 
-             className={style.container}>
-            <p>asd.link/{urlCode}</p>
+        <div className={style.container}>
+            <Button theme='link' onClick={() => copyText(linkName)}>
+                <p>asd.link/{urlCode}</p>
+            </Button>
         </div>
     );
 }

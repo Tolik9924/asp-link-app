@@ -2,10 +2,12 @@ import React from 'react';
 
 import style from './namePage.module.css';
 
-const NamePage = () => {
+const NamePage = ({
+    name
+}) => {
     return(
         <div className={style.container}>
-            <p>Get the <span className={style.short}>short</span> link as you go</p>
+            <p>Get the <span className={style.short}>{name}</span> link as you go<span>&#128075;</span></p>
         </div>
     );
 }

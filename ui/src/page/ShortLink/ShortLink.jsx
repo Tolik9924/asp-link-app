@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { increaseNewId } from '../../store/linkReducer';
-import Button from '../Button/Button';
-import Header from '../Header/Header';
-import Input from '../Input/Input';
-import Links from '../Links/Links';
-import NamePage from '../NamePage/NamePage';
+import Button from '../../Components/Button/Button';
+import Input from '../../Components/Input/Input';
+import Links from '../../Components/Links/Links';
+import NamePage from '../../Components/NamePage/NamePage';
 
 import { addLink } from '../../asyncActions/link.js';
 
@@ -47,8 +46,7 @@ const ShortLink = () => {
 
     return (
         <div>
-            <Header />
-            <NamePage />
+            <NamePage name={'short'} />
             <form onSubmit={newLinkAdd}>
                 <div className={style.input}>
                     <Input placeholder='http://type-your-link.here ...'
