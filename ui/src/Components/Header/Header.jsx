@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../Button/Button';
+import Logo from '../Logo/Logo';
 
 import style from './header.module.css';
 
@@ -15,7 +15,7 @@ const Header = () => {
     return (
         <div className={style.container}>
             <div className={style.left}>
-                asd.link®
+                <Logo />
             </div>
             <div className={style.right}>
                 <div className={style.validateContainer} onClick={handleClick}>
