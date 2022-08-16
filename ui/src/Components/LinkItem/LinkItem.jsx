@@ -11,9 +11,9 @@ const LinkItem = ({
 
     return (
         <div className={style.container}>
-            <Button theme='link' onClick={() => copyText(linkName)}>
-                <p>asd.link/{urlCode}</p>
-            </Button>
+                <Button theme='link' onClick={() => copyText(linkName)}>
+                    <p>asd.link/{urlCode}</p>
+                </Button>
         </div>
     );
 }

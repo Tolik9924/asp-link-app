@@ -13,9 +13,9 @@ const corsMiddleware = require('./middleware/cors.middleware');
 
 app.use(corsMiddleware);
 app.use(express.json())
-app.use('/api/link', linkRouter);
-app.use('/api/getlink', redirectRouter);
-app.use('/api/getlonglink', getLongLink);
+app.use('/asd.link/link', linkRouter);
+app.use('/asd.link/getlink', redirectRouter);
+app.use('/asd.link/getlonglink', getLongLink);
 
 const start = async () => {
     try {

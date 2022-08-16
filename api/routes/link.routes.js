@@ -4,7 +4,7 @@ const shortId = require('shortid');
 const validUrl = require('valid-url');
 const router = new Router();
 
-const baseUrl = 'http:localhost:5000/api/getlink';
+const baseUrl = 'http:localhost:5000/asd.link/getlink';
 
 router.post('/shortUrl', async (req, res) => {
 

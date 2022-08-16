@@ -10,33 +10,37 @@ import { addLink } from '../../asyncActions/link.js';
 
 import style from './shortLink.module.css';
 
-const ShortLink = () => {
+const ShortLink = ({
+    copy,
+    copyText
+}) => {
 
     const dispatch = useDispatch();
 
     const link = useSelector(state => state.link);
 
     const [nameLink, setNameLink] = useState('');
-
-    console.log(link);
-
-    const copyText = async (link) => {
-        await navigator.clipboard.writeText(link)
-    }
+    const [url, setUrl] = useState('');
 
     const newLinkAdd = (e) => {
 
         e.preventDefault();
 
+        console.log('add link');
+
         const newLink = {
             id: link.newId,
             linkName: nameLink,
-            urlCode: ''
+            urlCode: '',
+            url: url
         }
+
+        link.links = link.links.filter(item => item.url === url);
 
         dispatch(addLink(newLink));
         dispatch(increaseNewId());
 
+        setUrl(nameLink);
         setNameLink('');
     }
 
@@ -45,7 +49,7 @@ const ShortLink = () => {
     }
 
     return (
-        <div>
+        <div className={style.shortLink}>
             <NamePage name={'short'} />
             <form onSubmit={newLinkAdd}>
                 <div className={style.input}>
@@ -61,7 +65,11 @@ const ShortLink = () => {
                     </Button>
                 </div>
             </form>
-            <Links links={link.links} copyText={copyText} />
+            <Links links={link.links}
+                copyText={copyText}
+                url={url} />
+            {copy ?
+                <div className={style.textCopied}><p>text copied</p></div> : null}
         </div>
     );
 }

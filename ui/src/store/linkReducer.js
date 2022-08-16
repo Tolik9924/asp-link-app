@@ -1,6 +1,7 @@
 export const defaultState = {
     links: [],
-    newId: 0
+    newId: 0,
+    error: null
 }
 
 const ADD_LINK = 'ADD_LINK';

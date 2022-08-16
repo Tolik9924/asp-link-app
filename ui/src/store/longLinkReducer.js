@@ -1,5 +1,5 @@
 export const defaultState = {
-    links: [],
+    longLinks: [],
     newId: 0
 }
 
@@ -10,7 +10,7 @@ export const longLinkReducer = (state = defaultState, action) => {
     switch(action.type) {
         case ADD_LINK:
             return {
-                ...state, links: [...state.links, action.newLink]
+                ...state, longLinks: [...state.longLinks, action.newLink]
 
             }
         case INCREASE_NEW_ID: {

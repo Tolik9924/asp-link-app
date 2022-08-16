@@ -5,10 +5,9 @@ import style from './longLinkLists.module.css';
 
 const LongLinkLists = ({
     links,
-    copyText
+    copyText,
+    copy
 }) => {
-
-    console.log(links);
 
     return(
         <div className={style.container}>
@@ -17,7 +16,8 @@ const LongLinkLists = ({
                     return(
                       <LongLinkItem key={item.id}
                                 url={item.url}
-                                copyText={copyText} />
+                                copyText={copyText}
+                                copy={copy} />
                     );
                 })
             }

@@ -5,7 +5,8 @@ import style from './links.module.css';
 
 const Links = ({
     links,
-    copyText
+    copyText,
+    url
 }) => {
 
     console.log(links);
@@ -14,13 +15,13 @@ const Links = ({
         <div className={style.container}>
             {
                 links.map((item) => {
-                    return(
-                      <LinkItem key={item.id}
-                                linkName={item.linkName}
-                                linkId={item.id}
-                                copyText={copyText}
-                                urlCode={item.urlCode} />
-                    );
+                        return(
+                            <LinkItem key={item.id}
+                                      linkName={item.linkName}
+                                      linkId={item.id}
+                                      copyText={copyText}
+                                      urlCode={item.urlCode} />
+                          );
                 })
             }
         </div>

@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Provider } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
@@ -9,18 +10,34 @@ import Error from './page/Error/Error';
 import Docs from './page/Docs/Docs';
 
 function App() {
+
+    const [copy, setCopy] = useState(false);
+
+    const copyText = async (link) => {
+        await navigator.clipboard.writeText(link).then(() => {
+            setCopy(true);
+            setTimeout(() => {
+                setCopy(false); 
+            }, 3000);
+        })
+    }
+
     return (
         <div className='container'>
             <Header />
             <Routes>
                 <Route exact path="/" element={
                     <Provider store={storeLink}>
-                        <ShortLink />
+                        <ShortLink copy={copy} 
+                                   setCopy={setCopy}
+                                   copyText={copyText} />
                     </Provider>
                 } />
                 <Route path="/validateLink" element={
                     <Provider store={storeLink}>
-                        <LongLink />
+                        <LongLink copy={copy} 
+                                  setCopy={setCopy}
+                                  copyText={copyText} />
                     </Provider>
                 } />
                 <Route path="docs" element={<Docs />} />

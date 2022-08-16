@@ -73,4 +73,14 @@
     text-align: center;
 
     color: #101010;
+
+    transition: all 250ms linear;
+}
+
+.docs:hover {
+    background: #74550b;
+    border: 1px solid #74550b;
+    box-shadow: 0px 10px 34px #74550b;
+
+    transition: all 250ms linear;
 }

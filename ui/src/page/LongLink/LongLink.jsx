@@ -10,19 +10,17 @@ import style from './longLink.module.css';
 import NamePage from '../../Components/NamePage/NamePage';
 import LongLinkLists from '../../Components/LongLinkLists/LongLinkLists';
 
-const LongLink = () => {
+const LongLink = ({
+    copy,
+    copyText
+}) => {
 
     const dispatch = useDispatch();
 
     const codeLink = useSelector(state => state.longLink);
 
     const [code, setCode] = useState('');
-
-    console.log(codeLink);
-
-    const copyText = async (link) => {
-        await navigator.clipboard.writeText(link)
-    }
+    const [sameCode, setSameCode] = useState('');
 
     const newLinkAdd = (e) => {
 
@@ -34,9 +32,12 @@ const LongLink = () => {
             url: ''
         }
 
+        codeLink.longLinks = codeLink.longLinks.filter(item => item.url === sameCode);
+
         dispatch(addLongLink(newCode));
         dispatch(increaseNewId());
 
+        setSameCode(code);
         setCode('');
     }
 
@@ -45,7 +46,7 @@ const LongLink = () => {
     }
 
     return (
-        <div>
+        <div className={style.longLink}>
             <NamePage name='long' />
             <form onSubmit={newLinkAdd}>
                 <div className={style.input}>
@@ -61,7 +62,11 @@ const LongLink = () => {
                     </Button>
                 </div>
             </form>
-            <LongLinkLists links={codeLink.links} copyText={copyText} />
+            <LongLinkLists links={codeLink.longLinks} 
+                           copyText={copyText} 
+                           copy={copy} />
+            {copy ?
+            <div className={style.textCopied}><p>text copied</p></div> : null}
         </div>
     );
 }

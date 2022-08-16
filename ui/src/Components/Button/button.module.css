@@ -17,10 +17,17 @@
     color: #FFFFFF;
 
     cursor: pointer;
+    
+    transition: all 250ms linear;
+}
+
+.short:hover {
+    background: #23395c;
+    transition: all 250ms linear;
 }
 
 .link {
-    width: 420px;
+    width: 480px;
     height: 95px;
     background: #F6FBF8;
     box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.08);
