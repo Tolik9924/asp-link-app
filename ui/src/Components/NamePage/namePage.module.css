@@ -8,6 +8,12 @@
     margin-top: 5%;
 }
 
+@media screen and (max-width: 500px) {
+    .container {
+        font-size: 22px;
+    }
+}
+
 .short {
     color: #5380EA
 }

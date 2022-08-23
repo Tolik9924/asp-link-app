@@ -2,11 +2,13 @@
     margin-left: 18%;
 }
 
-.text {
+.svg {
     position: absolute;
-    top: 8px;
-    left: 20px;
-    font-family: 'Inter';
+    z-index: -1;
+}
+
+.text {
+    position: flex;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
