@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/asp-link-app/static/css/main.9e2195d2.css",
+    "main.css": "/asp-link-app/static/css/main.2db55156.css",
     "main.js": "/asp-link-app/static/js/main.12c8091c.js",
     "static/media/background.jpg": "/asp-link-app/static/media/background.d1e8d1486d825760b78e.jpg",
     "index.html": "/asp-link-app/index.html",
-    "main.9e2195d2.css.map": "/asp-link-app/static/css/main.9e2195d2.css.map",
+    "main.2db55156.css.map": "/asp-link-app/static/css/main.2db55156.css.map",
     "main.12c8091c.js.map": "/asp-link-app/static/js/main.12c8091c.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e2195d2.css",
+    "static/css/main.2db55156.css",
     "static/js/main.12c8091c.js"
   ]
 }
