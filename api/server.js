@@ -12,7 +12,7 @@ const getLongLink = require('./routes/getLongLink.routes');
 const corsMiddleware = require('./middleware/cors.middleware');
 
 app.use(corsMiddleware);
-app.use(express.json())
+app.use(express.json());
 app.use('/asd.link/link', linkRouter);
 app.use('/asd.link/getlink', redirectRouter);
 app.use('/asd.link/getlonglink', getLongLink);

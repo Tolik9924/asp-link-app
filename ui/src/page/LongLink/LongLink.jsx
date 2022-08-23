@@ -58,7 +58,7 @@ const LongLink = ({
                 <div className={style.button}>
                     <Button type='submit'
                         theme='short'>
-                        Validate me
+                        Validate me!
                     </Button>
                 </div>
             </form>

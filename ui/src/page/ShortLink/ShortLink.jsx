@@ -61,7 +61,7 @@ const ShortLink = ({
                 <div className={style.button}>
                     <Button type='submit'
                         theme='short'>
-                        Short me
+                        Short me!
                     </Button>
                 </div>
             </form>

@@ -8,9 +8,16 @@
 
     padding: 8px 16px;
 
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
+}
+
+.input::-webkit-input-placeholder {
+    color: #AAAAAA;
+}
+
+.input:focus {
+    border: none;
 }
