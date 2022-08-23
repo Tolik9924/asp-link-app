@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/asp-link-app/static/css/main.e971d0d4.css",
+    "main.js": "/asp-link-app/static/js/main.48f08bde.js",
+    "static/media/background.jpg": "/asp-link-app/static/media/background.d1e8d1486d825760b78e.jpg",
+    "index.html": "/asp-link-app/index.html",
+    "main.e971d0d4.css.map": "/asp-link-app/static/css/main.e971d0d4.css.map",
+    "main.48f08bde.js.map": "/asp-link-app/static/js/main.48f08bde.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e971d0d4.css",
+    "static/js/main.48f08bde.js"
+  ]
+}
