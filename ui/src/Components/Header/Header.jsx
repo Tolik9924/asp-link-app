@@ -21,7 +21,7 @@ const Header = () => {
                 <div className={style.validateContainer} onClick={handleClick}>
                     {
                         link ?
-                            <Link to="/" className={style.validate}>{
+                            <Link to="/asp-link-app" className={style.validate}>{
                                 'Short Link'
                             }</Link>
                             :
