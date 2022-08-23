@@ -26,7 +26,7 @@ function App() {
         <div className='container'>
             <Header />
             <Routes>
-                <Route exact path="/" element={
+                <Route exact path="/asp-link-app" element={
                     <Provider store={storeLink}>
                         <ShortLink copy={copy} 
                                    setCopy={setCopy}
